@@ -23,6 +23,6 @@ public class Rate {
 	 // display  
     public void display()   
     {  
-        System.out.format("   %-9s             %-9s      %5d               %9.2f                       %14.2f\n" ,product_name, unit, Quantity, price, totalPrice);  
+        System.out.format("        %-9s               %-9s           %9.2f         %5d           %14.2f\n" ,product_name, unit, price,Quantity, totalPrice);  
     }  
 }

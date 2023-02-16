@@ -27,7 +27,47 @@ public class StockItems {
 
 	// Print All Items in stock
 	public void display() {
-		System.out.format("             %5d                      %-9s                   %-9s                %9.2f   \n", id,product_name, unit, cost);
+		System.out.format("            %5d                  %-9s                 %-9s            %9.2f   \n", id,product_name, unit, cost);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getProduct_name() {
+		return product_name;
+	}
+
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
+	}
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	public int getQuantity() {
+		return Quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		Quantity = quantity;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
 	}
 
 }
