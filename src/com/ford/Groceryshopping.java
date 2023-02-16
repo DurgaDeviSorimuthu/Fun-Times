@@ -6,7 +6,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Groceryshopping {
@@ -33,8 +32,6 @@ public class Groceryshopping {
 		// "Thursday", "Friday", "Saturday"};
 		// prints current date and time
 		System.out.println("date: " + dateformat.format(date));
-		System.out.println("Enter the Customer Name: ");
-		String prd=sc.nextLine() ;
 		 do {
 			
 			 System.out.println("Enter ProductName");
