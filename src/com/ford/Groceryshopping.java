@@ -65,7 +65,7 @@ public class Groceryshopping {
 		 quantity=sc.nextInt(); 
 		 totalAmount=quantity*map.get(ch_id).getCost();
 		// rateList.add(new Rate(map.get(ch_id).getProduct_name(), unit, quantity, costPerUnit, totalAmount));
-		 rateList.add(new Rate(map.get(ch_id).getProduct_name(), map.get(ch_id).getUnit(), quantity, map.get(ch_id).getCost(), totalAmount));
+		 rateList.add(new Rate(map.get(ch_id).getId(),map.get(ch_id).getProduct_name(), map.get(ch_id).getUnit(), quantity, map.get(ch_id).getCost(), totalAmount));
 		 System.out.print("Want to shopping more items? (y or n): ");
 		 ch_switch = sc.next().charAt(0);  
 		 sc.nextLine();  
@@ -73,12 +73,18 @@ public class Groceryshopping {
 		 while(ch_switch == 'y' || ch_switch == 'Y');
 		 Rate.displayFormat();
 		 for(Rate srate:rateList) {
+			 if(srate.getProduct_name().equalsIgnoreCase("Apple")) {
+			 discount = srate.getTotalPrice()*10/100;
+			 srate.setTotalPrice(srate.getTotalPrice()-discount);
+			 }
 			 srate.display();
+			 overAllAmount=overAllAmount+srate.getTotalPrice();
 		 }
 		 
-		 
+		 System.out.println("OverAllAmount: "+overAllAmount);
 		
-		 
+		 System.out.println("\t\t\t\t----------------Thank You for Shopping!!-----------------");  
+         System.out.println("\t\t\t\t                     Visit Again");  
 		 
 	}
 
