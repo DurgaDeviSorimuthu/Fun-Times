@@ -35,7 +35,8 @@ public class Groceryshopping {
 		// "Thursday", "Friday", "Saturday"};
 		// prints current date and time
 		System.out.println("date: " + dateformat.format(date));
-		do {
+		
+		  do {
 			System.out.println("Enter ProductName");
 			productName = sc.nextLine();
 			System.out.println("Enter the Units");
@@ -48,6 +49,22 @@ public class Groceryshopping {
 			sc.nextLine();
 
 		} while (ch_switch == 'y' || ch_switch == 'Y');
+		
+		
+	/*	do {
+			System.out.println("\"--------------------Welcome to Henry Grocery-----------------\"");
+			System.out.println();
+			System.out.println("Product     unit      cost");
+			System.out.println("==========================");
+			System.out.println("1.   soup      tin       " + ConstantData.SOUP_PRICE);
+			System.out.println("2.  bread     loaf      " + ConstantData.BREAD_PRICE);
+			System.out.println("3.   milk      bottle    " + ConstantData.MILK_PRICE);
+			System.out.println("4.   apples    single    " + ConstantData.APPLE_PRICE);
+}
+		while(ch_switch == 'y' || ch_switch == 'Y');
+		*/
+		
+		
 		StockItems.displayFormat();
 		for (StockItems s : arrList) {
 			s.display();

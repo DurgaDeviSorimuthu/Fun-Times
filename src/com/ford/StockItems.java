@@ -20,14 +20,14 @@ public class StockItems {
 	public static void displayFormat() {
 		System.out.format(
 				"-----------------------------------------------------------------------------------------------------------------------------------");
-		System.out.print("\n \t\tID\t\tProduct\t\tUnit\t\tCost \t\t\t\t\n");
+		System.out.print("\n \t\tID\t\tProduct\t\t\tUnit\t\\t\\tCost \t\t\t\t\n");
 		System.out.format(
 				"-----------------------------------------------------------------------------------------------------------------------------------\n");
 	}
 
 	// Print All Items in stock
 	public void display() {
-		System.out.format("            %5d                  %-9s                 %-9s            %9.2f   \n", id,product_name, unit, cost);
+		System.out.format("            %4d                  %4s                %4s                   %4f   \n", id,product_name, unit, cost);
 	}
 
 	public int getId() {
